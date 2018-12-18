@@ -26,9 +26,26 @@ public class Library {
 		}
 	}
 	
-//	public boolean updateItem(Item item) {
-//		
-//	}
+	// Update Item
+	public Item updateItem(Item item, String field, String value) {
+		switch(field) {
+		case "author":
+			item.setAuthor(value);
+			return item;
+		case "pages":
+			item.setPages(Integer.parseInt(value));
+			return item;
+		case "year":
+			item.setYear(Integer.parseInt(value));
+			return item;
+		case "checkedIn":
+			item.setCheckedIn(Boolean.parseBoolean(value));
+			return item;
+		}
+		;
+		
+	}
+	
 	
 	public boolean checkIn(Item item) {
 		if(item.isCheckedIn()==false) {
@@ -41,7 +58,7 @@ public class Library {
 		
 	}
 	
-	
+	// Register person methods
 	public void addPerson(Person person) {
 		personRegister.add(person);
 	}
@@ -49,14 +66,6 @@ public class Library {
 	public void removePerson(Person person) {
 		personRegister.remove(person);
 	}
-	
-	
-//	public int listSize(String choice) {
-//		if(choice.equals(libList))
-//			return list.size();
-//	}
-//	
-//	
 	
 	
 
