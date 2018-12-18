@@ -28,22 +28,35 @@ public class Library {
 	
 	// Update Item
 	public Item updateItem(Item item, String field, String value) {
-		switch(field) {
+		switch(field.toLowerCase()) {
 		case "author":
 			item.setAuthor(value);
-			return item;
+			break;
 		case "pages":
 			item.setPages(Integer.parseInt(value));
-			return item;
+			break;
 		case "year":
 			item.setYear(Integer.parseInt(value));
-			return item;
-		case "checkedIn":
+			break;
+		case "checkedin":
 			item.setCheckedIn(Boolean.parseBoolean(value));
-			return item;
-		}
-		;
-		
+			break;
+		case "genre":
+			if (item instanceof Book) {
+				((Book)item).setGenre(value);
+			}
+			break;
+		case "classified":
+			if(item instanceof GovDocs) {
+				((GovDocs)item).setClassified(Boolean.parseBoolean(value));
+			}
+			break;
+		case "region":
+			if(item instanceof Maps) {
+				((Maps)item).setRegion(value);
+			}
+		};
+		return item;
 	}
 	
 	
@@ -67,6 +80,23 @@ public class Library {
 		personRegister.remove(person);
 	}
 	
+	public Person updatePerson(Person person, String field, String value) {
+		switch(field.toLowerCase()) {
+		case "name":
+			person.setName(value);
+			break;
+		case "age":
+			person.setAge(Integer.parseInt(value));
+			break;
+		case "id":
+			person.setId(Integer.parseInt(value));
+			break;
+		case "numitems":
+			person.setNumItems(Integer.parseInt(value));
+			break;
+		}
+		return person;
+	}
 	
 
 }

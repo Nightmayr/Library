@@ -82,8 +82,19 @@ public class LibraryTest {
 		assertEquals(0, library.personRegister.size());
 		
 	}
-
 	
+	@Test
+	public void updateItemTest() {
+		library.updateItem(book1, "genre", "Henry Chia");
+		assertEquals("Henry Chia", book1.getGenre());
+	}
+	
+
+	@Test
+	public void updatePersonTest() {
+		library.updatePerson(umayr, "age", "56");
+		assertEquals(56, umayr.getAge());
+	}
 	
 	
 }
