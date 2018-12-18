@@ -10,7 +10,7 @@ public class LibraryTest {
 	Library library;
 	GovDocs doc1;
 	Maps map1;
-	Person person;
+	Person umayr;
 	
 	@Test @Ignore
 	public void fail() {
@@ -21,7 +21,7 @@ public class LibraryTest {
 	public void setup() {
 		library = new Library();
 		book1 = new Book("Umayr Saghir", 100, 1993, true, "Sci-Fi", false, "Penguin");
-		person = new Person("John Smith", 23, 57657, 0);
+		umayr = new Person("John Smith", 23, 57657, 0);
 //		doc1 = new GovDocs();
 //		map1 = new Maps();
 		
@@ -30,14 +30,14 @@ public class LibraryTest {
 	@Test
 	public void addItemTest() {
 		library.addItem(book1);
-		assertEquals(1, library.listSize(book1));
+		assertEquals(1, library.libList.size());
 	}
 	
 	@Test
 	public void removeItemTest() {
 		addItemTest();
 		library.removeItem(book1);
-		assertEquals(0,library.listSize(book1));
+		assertEquals(0,library.libList.size());
 	}
 	
 	@Test
@@ -69,6 +69,19 @@ public class LibraryTest {
 		assertEquals(true, input);
 	}
 	
+	@Test
+	public void addPersonTest() {
+		library.addPerson(umayr);
+		assertEquals(1, library.personRegister.size());
+	}
+	
+	@Test
+	public void removePersonTest() {
+		addPersonTest();
+		library.removePerson(umayr);
+		assertEquals(0, library.personRegister.size());
+		
+	}
 
 	
 	

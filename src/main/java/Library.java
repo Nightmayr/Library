@@ -3,11 +3,15 @@ import java.util.ArrayList;
 public class Library {
 	
 	ArrayList<Item> libList = new ArrayList<>();
+	ArrayList<Person> personRegister = new ArrayList<>();
 	
+	// Add item to libList
 	public void addItem(Item item) {
 		libList.add(item);
+		
 	}
 	
+	// Remove item from libList
 	public void removeItem(Item item) {
 		libList.remove(item);
 	}
@@ -38,11 +42,21 @@ public class Library {
 	}
 	
 	
-	public int listSize(Item item) {
-		return libList.size();
+	public void addPerson(Person person) {
+		personRegister.add(person);
+	}
+	
+	public void removePerson(Person person) {
+		personRegister.remove(person);
 	}
 	
 	
+//	public int listSize(String choice) {
+//		if(choice.equals(libList))
+//			return list.size();
+//	}
+//	
+//	
 	
 	
 
