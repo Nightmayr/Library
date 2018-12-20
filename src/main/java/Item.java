@@ -1,5 +1,5 @@
 
-public abstract class Item {
+public abstract class Item implements Weight {
 
 	private String author;
 	private int pages;

@@ -36,4 +36,10 @@ public class Book extends Item {
 		this.publisher = publisher;
 	}
 
+	@Override
+	public void addWeight() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

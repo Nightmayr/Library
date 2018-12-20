@@ -36,4 +36,10 @@ public class Maps extends Item {
 		this.numberRoutes = numberRoutes;
 	}
 
+	@Override
+	public void addWeight() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

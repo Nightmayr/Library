@@ -36,4 +36,10 @@ public class GovDocs extends Item {
 		this.govParty = govParty;
 	}
 
+	@Override
+	public void addWeight() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

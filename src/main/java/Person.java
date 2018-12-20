@@ -1,5 +1,5 @@
 
-public class Person {
+public class Person implements Weight {
 	
 	private String name;
 	private int age;
@@ -47,7 +47,13 @@ public class Person {
 	public void setNumItems(int numItems) {
 		this.numItems = numItems;
 	}
-	
+
+
+	@Override
+	public void addWeight() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
