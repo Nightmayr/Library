@@ -11,6 +11,7 @@ public class LibraryTest {
 	GovDocs doc1;
 	Maps map1;
 	Person umayr;
+	private int id = 0;
 	
 	@Test @Ignore
 	public void fail() {
@@ -21,7 +22,8 @@ public class LibraryTest {
 	public void setup() {
 		library = new Library();
 		book1 = new Book("Umayr Saghir", 100, 1993, true, "Sci-Fi", false, "Penguin");
-		umayr = new Person("John Smith", 23, 57657, 0);
+		umayr = new Person("John Smith", 23, 0);
+		id++;
 //		doc1 = new GovDocs();
 //		map1 = new Maps();
 		
@@ -96,5 +98,9 @@ public class LibraryTest {
 		assertEquals(56, umayr.getAge());
 	}
 	
+	@Test
+	public void personIdTest() {
+		assertEquals(id, umayr.getId());
+	}
 	
 }

@@ -5,12 +5,14 @@ public class Person {
 	private int age;
 	private int id;
 	private int numItems;
+	private static int count = 1;
 	
-	public Person(String name, int age, int id, int numItems) {
+	public Person(String name, int age, int numItems) {
 		this.name = name;
 		this.setAge(age);
-		this.setId(id);
 		this.setNumItems(numItems);
+		this.id = count;
+		count++;
 	}
 	
 	

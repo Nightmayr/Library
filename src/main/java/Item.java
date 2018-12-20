@@ -5,12 +5,15 @@ public abstract class Item {
 	private int pages;
 	private int year;
 	private boolean checkedIn;
+	private static int count = 0;
+	private int id;
 	
 	public Item(String author, int pages, int year, boolean checkedIn) {
 		this.author = author;
 		this.pages = pages;
 		this.year = year;
 		this.checkedIn = checkedIn;
+		this.id = count++;
 	}
 
 	public String getAuthor() {
@@ -44,5 +47,14 @@ public abstract class Item {
 	public void setCheckedIn(boolean checkedIn) {
 		this.checkedIn = checkedIn;
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 
 }
